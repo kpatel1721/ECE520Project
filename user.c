@@ -32,7 +32,7 @@ int count_outputs(NODE *graph, int Max, int out_list[]){
     for(i=0;i<=Max;i++){
         if(graph[i].Type!=0){
             if(graph[i].Po == 1){
-		out_list[num_output] = i;
+		        out_list[num_output] = i;
                 num_output++;
                 }
         }
@@ -64,7 +64,7 @@ void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
                 graph[i].Cval = graph[temp->id].Cval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = OR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
                     temp = temp->next;
                 }
             }
@@ -78,22 +78,22 @@ void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
                 }
                 graph[i].Cval = NOT_out[graph[i].Cval];
             }
-            else if(graph[i].Type== NOR){
+            else if(graph[i].Type == NOR){
                 LIST *temp = graph[i].Fin;
                 graph[i].Cval = graph[temp->id].Cval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = OR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
                     temp = temp->next;
                 }
                 graph[i].Cval = NOT_out[graph[i].Cval];
             }
-            else if(graph[i].Type == XOR){
+            else if(graph[i].Type==XOR){
                 LIST *temp = graph[i].Fin;
                 graph[i].Cval = graph[temp->id].Cval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = XOR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
                     temp = temp->next;
                 }
             }
@@ -102,7 +102,7 @@ void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
                 graph[i].Cval = graph[temp->id].Cval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = XOR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
                     temp = temp->next;
                 }
                 graph[i].Cval = NOT_out[graph[i].Cval];
@@ -118,8 +118,6 @@ void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
             }
             else if(graph[i].Type == FROM){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
-                temp = temp->next;
                 while(temp != NULL){
                     graph[i].Cval = graph[temp->id].Cval;
                     temp = temp->next;
