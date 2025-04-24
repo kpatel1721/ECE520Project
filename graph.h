@@ -39,6 +39,8 @@ Constant Declarations
 #define FROM 10				// STEM BRANCH
 
 #define X 2
+#define D 3
+#define Db 4
 /***************************************************************************************************************************
 Structure Declarations 
 ****************************************************************************************************************************/
@@ -60,6 +62,10 @@ typedef struct PATTERN_type{
   int matrix[Mlin]; 
 } PATTERN; 
 //4.Stucture declaration for FAULT
+typedef struct FAULT_type{
+  int id;
+  int val;
+} FAULT;
 
 
 
@@ -91,5 +97,7 @@ User Defined Functions in user.c
 int count_inputs(NODE *, int);
 int count_outputs(NODE *, int, int*);
 void sim(NODE *, int, int, PATTERN *, int);
-void out_write(FILE*,NODE*,PATTERN*,int*,int,int,int);
+void out_write_sim(FILE*,NODE*,PATTERN*,int*,int,int,int,int);
+int ReadFault(FILE *, FAULT *);
+void fault_sim(NODE*, int, int, PATTERN*, int, FAULT*, int, FILE*);
 /****************************************************************************************************************************/

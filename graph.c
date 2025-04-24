@@ -147,7 +147,8 @@ for(i=0;i<=Max;i++){
     temp=NULL;  temp=graph[i].Fot;   if(temp!=NULL){  PrintList(temp); }
     printf("\n"); } }
 return;
-}//end of PrintCircuit
+}
+//end of PrintCircuit
 /****************************************************************************************************************************
 Free the memory of all member of graph structure
 *****************************************************************************************************************************/
@@ -180,7 +181,6 @@ int ReadVec(FILE *fvec, PATTERN *p){
 
     //Decrement length to not have extra input
     length--;
-    //col = length; 
 
     //For loop that stores input at 1 0 or 2 into Pattern p for current row
     for(i = 0; i < length; i++){
@@ -190,31 +190,9 @@ int ReadVec(FILE *fvec, PATTERN *p){
       else if(input[i] == 'x' || input[i] == 'X'){p[row].matrix[i] = 2;}
     }
 
-    //Print current row
-    //for(i = 0; i < length; i++){
-    //  printf("%d",p[row].matrix[i]);
-    //  if(i == length-1){printf("\n");}
-    //}
-    
-    //print string of current row with spaces
-    //char output[length*2];
-    //int j = 0; 
-    //for(i = 0; i < length; i++){
-    //  output[j] = input[i];
-    //  j++;
-    //  output[j] = ' ';
-    //  j++; 
-    //}
-    //output[j-1] = '\0';
-    //printf("%s\n", output);
-
     //increment row
     row++;
   }
-
-  //print number of rows and columns
-  //printf("\nNumber of rows: %d \n",row);
-  //printf("\nNumber of columns: %d \n",col);
   return row;
 }
 
