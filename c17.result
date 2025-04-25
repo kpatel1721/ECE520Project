@@ -1,3 +1,39 @@
-Inputs: 0 0 0 2 2 Outputs: 0 2 
-Inputs: 2 1 0 2 2 Outputs: 1 1 
-Inputs: 1 2 1 2 2 Outputs: 1 2 
+Inputs: 000xx
+Outputs: 0x
+Fault 2/1: 0x
+Fault Not Detected
+Fault 11/0: 00
+Fault Not Detected
+Fault 22/0: 00
+Fault Not Detected
+Fault 16/1: DbDb
+Fault Detected
+Fault 6/1: 00
+Fault Not Detected
+
+Inputs: x10xx
+Outputs: 11
+Fault 2/1: Dbx
+Fault Detected
+Fault 11/0: 00
+Fault Not Detected
+Fault 22/0: 00
+Fault Not Detected
+Fault 16/1: DbDb
+Fault Detected
+Fault 6/1: 00
+Fault Not Detected
+
+Inputs: 1x1xx
+Outputs: 1x
+Fault 2/1: 1x
+Fault Not Detected
+Fault 11/0: 00
+Fault Not Detected
+Fault 22/0: 00
+Fault Not Detected
+Fault 16/1: DbDb
+Fault Detected
+Fault 6/1: 00
+Fault Not Detected
+

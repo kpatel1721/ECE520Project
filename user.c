@@ -170,10 +170,8 @@ int ReadFault(FILE *ffau, FAULT *f){
 
 void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAULT *f, int fault_idx, FILE *fres){
     int i,j,k; 
-    int detect;
     int input_count = 0;
     for(j = 0; j < fault_idx; j++){
-        detect = 0;
         for(i=0;i<=Max;i++){
             if(graph[i].Type==0) {continue;}
             if(graph[i].Type == INPT){
@@ -254,17 +252,9 @@ void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAU
                 }
             }
         }
-        for(k=0;k<Max;k++){
-            if(graph[i].Po != 1){
-                continue;
-    	    }
-            if((graph[i].Cval == D) || (graph[i].Cval == Db)){
-                detect = 1;
-                break;
-            }
-        }
         fprintf(fres, "\nFault %d/%d: ",f[j].id,f[j].val);
-        i = 0; 
+        i = 0;
+        int detect = 0; 	
         for(i=0;i<=Max;i++){
             if(graph[i].Po != 1){
 	    	    continue;
@@ -274,13 +264,15 @@ void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAU
             }
             else if(graph[i].Cval == 3){
                 fprintf(fres,"D");
+		detect = 1;
             }
             else if(graph[i].Cval == 4){
                 fprintf(fres,"Db");
+		detect = 1;
             }
-	    	else{
-	    	    fprintf(fres,"%d",graph[i].Cval);
- 	    	}
+	    else{
+	    	fprintf(fres,"%d",graph[i].Cval);
+ 	    }
         }
         if(detect == 1){
             fprintf(fres, "\nFault Detected");

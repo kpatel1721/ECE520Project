@@ -1,3 +1,39 @@
-Inputs: 2 2 2 2 2 0 1 1 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 0 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 1 1 1 1 2 2 2 2 2 2 2 2 2 2 1 2 Outputs: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-Inputs: 2 2 2 2 2 0 1 1 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 2 2 2 2 2 2 2 2 2 2 0 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 0 0 0 0 0 1 1 1 2 2 2 2 2 2 2 2 2 2 1 2 Outputs: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-Inputs: 2 2 2 2 2 0 2 2 2 1 1 2 2 2 1 0 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 2 2 2 2 2 2 2 2 2 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 0 1 1 1 2 0 0 0 0 0 0 1 1 0 0 0 Outputs: 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+Inputs: xxxxx0111xxx1xxxxxxxxxxxxxxxxxxxx
+Outputs: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault 8678/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 1308/3: xxxxxxxxxxxxxxxx1xxxxxxxx
+Fault Not Detected
+Fault 10806/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 7222/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 6649/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+
+Inputs: xxxxx0111xxx1xxxxxxxxxxxxxxxxxxxx
+Outputs: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault 8678/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 1308/3: xxxxxxxxxxxxxxxx1xxxxxxxx
+Fault Not Detected
+Fault 10806/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 7222/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 6649/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+
+Inputs: xxxxx0xxx11xxx10xxxxxxxxxxxxx1xxx
+Outputs: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault 8678/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 1308/3: xxxxxxxxxxxxxxxx1xxxxxxxx
+Fault Not Detected
+Fault 10806/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 7222/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+Fault 6649/3: xxxxxxxxxxxxxxxxxxxxxxxxx
+Fault Not Detected
+
