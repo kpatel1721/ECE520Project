@@ -4,20 +4,20 @@ int INPT_out[5] = {0,1,X,D,Db};
 int OR_out[5][5] = {{0,1,X,D,Db},
                     {1,1,1,1,1},
                     {X,1,X,X,X},
-                    {D,1,X,D,1},
-                    {Db,1,X,1,Db}};
+                    {D,1,X,D,0},
+                    {Db,1,X,0,Db}};
 
 int AND_out[5][5] = {{0,0,0,0,0}, 
-                     {0,1,X,D,D}, 
+                     {0,1,X,D,Db}, 
                      {0,X,X,X,X},
                      {0,D,X,D,0},
-                     {0,D,X,0,Db}};
+                     {0,Db,X,0,0}};
 
 int XOR_out[5][5] = {{0,1,X,D,Db},
-                     {1,0,X,D,Db},
+                     {1,0,X,Db,D},
                      {X,X,X,X,X},
-                     {D,D,X,0,1},
-                     {Db,Db,X,1,0}};
+                     {D,Db,X,D,1},
+                     {Db,D,X,1,0}};
 
 int NOT_out[5] = {1,0,X,Db,D};
 
@@ -172,83 +172,85 @@ void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAU
     int i,j,k; 
     int input_count = 0;
     for(j = 0; j < fault_idx; j++){
+        input_count = 0;
         for(i=0;i<=Max;i++){
             if(graph[i].Type==0) {continue;}
             if(graph[i].Type == INPT){
-                graph[i].Cval = p[cur_idx].matrix[input_count];
+                graph[i].Fval = p[cur_idx].matrix[input_count];
                 input_count++;
             }
             else if(graph[i].Type==AND){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = AND_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
             }
             else if(graph[i].Type==OR){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = OR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = OR_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
             }
             else if(graph[i].Type == NAND){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = AND_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = AND_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
-                graph[i].Cval = NOT_out[graph[i].Cval];
+                graph[i].Fval = NOT_out[graph[i].Fval];
             }
             else if(graph[i].Type == NOR){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = OR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = OR_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
-                graph[i].Cval = NOT_out[graph[i].Cval];
+                graph[i].Fval = NOT_out[graph[i].Fval];
             }
             else if(graph[i].Type==XOR){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = XOR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = XOR_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
             }
             else if(graph[i].Type == XNOR){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
                 temp = temp->next;
                 while(temp != NULL){
-                    graph[i].Cval = XOR_out[graph[i].Cval][graph[temp->id].Cval];
+                    graph[i].Fval = XOR_out[graph[i].Fval][graph[temp->id].Fval];
                     temp = temp->next;
                 }
-                graph[i].Cval = NOT_out[graph[i].Cval];
+                graph[i].Fval = NOT_out[graph[i].Fval];
             }
             else if(graph[i].Type == BUFF || graph[i].Type == FROM){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = graph[temp->id].Cval;
+                graph[i].Fval = graph[temp->id].Fval;
+                
             }
             else if(graph[i].Type == NOT){
                 LIST *temp = graph[i].Fin;
-                graph[i].Cval = NOT_out[graph[temp->id].Cval];
+                graph[i].Fval = NOT_out[graph[temp->id].Fval];
             }
             if(i == f[j].id){
-                if((graph[i].Cval == 1) && (f[i].val == 0)){
-                    graph[i].Cval = D;
+                if((graph[i].Fval == 1) && (f[i].val == 0)){
+                    graph[i].Fval = D;
                 }
-                else if((graph[i].Cval == 0) && (f[i].val == 1)){
-                    graph[i].Cval = Db;
+                else if((graph[i].Fval == 0) && (f[i].val == 1)){
+                    graph[i].Fval = Db;
                 }
             }
         }
@@ -259,26 +261,26 @@ void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAU
             if(graph[i].Po != 1){
 	    	    continue;
         	}
-            if(graph[i].Cval == 2){
+            if(graph[i].Fval == 2){
                 fprintf(fres,"x");		
             }
-            else if(graph[i].Cval == 3){
+            else if(graph[i].Fval == 3){
                 fprintf(fres,"D");
 		detect = 1;
             }
-            else if(graph[i].Cval == 4){
+            else if(graph[i].Fval == 4){
                 fprintf(fres,"Db");
 		detect = 1;
             }
 	    else{
-	    	fprintf(fres,"%d",graph[i].Cval);
+	    	fprintf(fres,"%d",graph[i].Fval);
  	    }
         }
         if(detect == 1){
-            fprintf(fres, "\nFault Detected");
+            fprintf(fres, " Fault Detected");
         }
         else if(detect == 0){
-            fprintf(fres, "\nFault Not Detected");
+            fprintf(fres, " Fault Not Detected");
         }
     }
     fprintf(fres, "\n\n");

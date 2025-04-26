@@ -33,11 +33,6 @@ void main(int argc,char **argv){
     ffau = fopen(argv[3],"r");
     int fault_idx = ReadFault(ffau,stuck);
     fclose(ffau);
-    printf("Faults:\n");
-    //for(a = 0; a < fault_idx; a++){
-    //    printf("%d",stuck[a].id);
-    //    printf("/%d\n",stuck[a].val);
-    //}
 
     //insert all inputs in array
     fres = fopen(argv[4],"w"); // Open the file once before the loop
@@ -47,17 +42,7 @@ void main(int argc,char **argv){
         fault_sim(graph,Max,num_input,vector,a,stuck,fault_idx,fres);
     }
     fclose(fres); // Close the file after the loop
-
-    //Opt=0; 
-    //Opt=atoi(argv[3]);                          //getting the option from terminal for xval
-    //fres=fopen(argv[2],"w");                           //file pointer to open .out file for printing results
-
-    //Perform Logic Simulation for each Input vector and print the Pos .val in output file   
-
-    //fclose(fres);                                                  //close file pointer for .out file
     ClearCircuit(graph,Mnod);                                      //clear memeory for all members of graph
-
-    //for(a=0;a<Total;a++){ bzero(vector[a].piv,Mpi); }                //clear memeory for all members of vector
     return;
 }//end of main
 /****************************************************************************************************************************/

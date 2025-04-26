@@ -1,85 +1,50 @@
 Inputs: 1xxx001xx0001x011000xxx01100xx110
 Outputs: 0xxx001001xx001x1xxxxxxx0
-Fault 1231/5: 0xxx001001xx001x1xxxxxxx0
-Fault Not Detected
-Fault 346/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2829/5: 0000000000000000100000110
-Fault Not Detected
-Fault 1697/5: 000000000000000010000011D
-Fault Detected
-Fault 1661/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2129/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2071/5: 0000000000000000100000110
-Fault Not Detected
+Fault 1231/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
+Fault 346/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
+Fault 2829/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
+Fault 1697/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
+Fault 1661/5: 0xxx001001xx001x1xxxxxxxDb Fault Detected
+Fault 2129/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
+Fault 2071/5: 0xxx001001xx001x1xxxxxxx0 Fault Not Detected
 
 Inputs: 1xxx101xx0001x010xxxxxxxx0xxxxx1x
 Outputs: xxxxxxxxxxxxxxxxxxxxxxxx1
-Fault 1231/5: xxxxxxxxxxxxxxxxxxxxxxxxD
-Fault Detected
-Fault 346/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2829/5: 0000000000000000100000110
-Fault Not Detected
-Fault 1697/5: 000000000000000010000011D
-Fault Detected
-Fault 1661/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2129/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2071/5: 0000000000000000100000110
-Fault Not Detected
+Fault 1231/5: xxxxxxxxxxxxxxxxxxxxxxxxD Fault Detected
+Fault 346/5: xxxxxxxxxxxxxxxxxxxxxxxx1 Fault Not Detected
+Fault 2829/5: xxxxxxxxxxxxxxxxxxxxxxxx1 Fault Not Detected
+Fault 1697/5: xxxxxxxxxxxxxxxxxxxxxxxx1 Fault Not Detected
+Fault 1661/5: xxxxxxxxxxxxxxxxxxxxxxxxD Fault Detected
+Fault 2129/5: xxxxxxxxxxxxxxxxxxxxxxxx1 Fault Not Detected
+Fault 2071/5: xxxxxxxxxxxxxxxxxxxxxxxx1 Fault Not Detected
 
 Inputs: 1xxx001xx1001x011000xx0111000x111
 Outputs: 0xxx101001xx001x1xxxxx1x0
-Fault 1231/5: 0xxx101001xx001x1xxxxx1xD
-Fault Detected
-Fault 346/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2829/5: 0000000000000000100000110
-Fault Not Detected
-Fault 1697/5: 000000000000000010000011D
-Fault Detected
-Fault 1661/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2129/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2071/5: 0000000000000000100000110
-Fault Not Detected
+Fault 1231/5: 0xxx101001xx001x1xxxxx1xDb Fault Detected
+Fault 346/5: 0xxx101001xx001x1xxxxx1x0 Fault Not Detected
+Fault 2829/5: 0xxx101001xx001x1xxxxx1x0 Fault Not Detected
+Fault 1697/5: 0xxx101001xx001x1xxxxx1xDb Fault Detected
+Fault 1661/5: 0xxx101001xx001x1xxxxx1xDb Fault Detected
+Fault 2129/5: 0xxx101001xx001x1xxxxx1x0 Fault Not Detected
+Fault 2071/5: 0xxx101001xx001x1xxxxx1x0 Fault Not Detected
 
 Inputs: 1xxx001xx1101x011000xx0111000x111
 Outputs: 0xxx101001xx101x1xxxxx1x1
-Fault 1231/5: 0xxx101001xx101x1xxxxx1xD
-Fault Detected
-Fault 346/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2829/5: 0000000000000000100000110
-Fault Not Detected
-Fault 1697/5: 000000000000000010000011D
-Fault Detected
-Fault 1661/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2129/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2071/5: 0000000000000000100000110
-Fault Not Detected
+Fault 1231/5: 0xxx101001xx101x1xxxxx1xD Fault Detected
+Fault 346/5: 0xxx101001xx101x1xxxxx1x1 Fault Not Detected
+Fault 2829/5: 0xxx101001xx101x1xxxxx1x1 Fault Not Detected
+Fault 1697/5: 0xxx101001xx101x1xxxxx1xD Fault Detected
+Fault 1661/5: 0xxx101001xx101x1xxxxx1x1 Fault Not Detected
+Fault 2129/5: 0xxx101001xx101x1xxxxx1x1 Fault Not Detected
+Fault 2071/5: 0xxx101001xx101x1xxxxx1x1 Fault Not Detected
 
 Inputs: xxxxxxxxxx0xxxxx0000xxx011x1x01x0
 Outputs: xxxxxxxxxxxx0xxxxxxxxxxxx
-Fault 1231/5: xxxxxxxxxxxx0xxxxxxxxxxxx
-Fault Not Detected
-Fault 346/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2829/5: 0000000000000000100000110
-Fault Not Detected
-Fault 1697/5: 000000000000000010000011D
-Fault Detected
-Fault 1661/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2129/5: 0000000000000000100000110
-Fault Not Detected
-Fault 2071/5: 0000000000000000100000110
-Fault Not Detected
+Fault 1231/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 346/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 2829/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 1697/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 1661/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 2129/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
+Fault 2071/5: xxxxxxxxxxxx0xxxxxxxxxxxx Fault Not Detected
 

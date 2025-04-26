@@ -1,85 +1,50 @@
 Inputs: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx1xxxxxxxxxxxxxxxxx0x100000xxxxx
 Outputs: xxxxxxxxxxxxxxxxx1xxxxxxxx
-Fault 340/5: xxxxxxxxxxxxxxxxxDbxxxxxxxx
-Fault Detected
-Fault 758/5: 00000111101000000000000000
-Fault Not Detected
-Fault 466/5: 00000111101000000000000000
-Fault Not Detected
-Fault 156/5: 00000111101000000000000000
-Fault Not Detected
-Fault 375/5: 000x01x11x1000xxxxxxxxxxxx
-Fault Not Detected
-Fault 347/5: 00x00111101000000000000000
-Fault Not Detected
-Fault 319/5: 00000111101000000000000000
-Fault Not Detected
+Fault 340/5: xxxxxxxxxxxxxxxxxDxxxxxxxx Fault Detected
+Fault 758/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
+Fault 466/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
+Fault 156/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
+Fault 375/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
+Fault 347/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
+Fault 319/5: xxxxxxxxxxxxxxxxx1xxxxxxxx Fault Not Detected
 
 Inputs: 1xxx11xx11xxxxx11xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0x010x00xx1x0
 Outputs: xxxxxxxxxxx1xxxxx0xxxxxxxx
-Fault 340/5: xxxxxxxxxxx1xxxxx0xxxxxxxx
-Fault Not Detected
-Fault 758/5: 00000111101000000000000000
-Fault Not Detected
-Fault 466/5: 00000111101000000000000000
-Fault Not Detected
-Fault 156/5: 00000111101000000000000000
-Fault Not Detected
-Fault 375/5: 000x01x11x1000xxxxxxxxxxxx
-Fault Not Detected
-Fault 347/5: 00x00111101000000000000000
-Fault Not Detected
-Fault 319/5: 00000111101000000000000000
-Fault Not Detected
+Fault 340/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
+Fault 758/5: xxxxxxxxxxx1xxxxxDbxxxxxxxx Fault Detected
+Fault 466/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
+Fault 156/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
+Fault 375/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
+Fault 347/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
+Fault 319/5: xxxxxxxxxxx1xxxxx0xxxxxxxx Fault Not Detected
 
 Inputs: x0xxxxxxxx0xxxxxxxxxxxx1xxxxxxxxxx0xxxxxxxxxxxxxx00001xxxxx1
 Outputs: xxxx0x111xxx00xxxx0xxxx0xx
-Fault 340/5: xxxx0x111xxx00xxxx0xxxx0xx
-Fault Not Detected
-Fault 758/5: 00000111101000000000000000
-Fault Not Detected
-Fault 466/5: 00000111101000000000000000
-Fault Not Detected
-Fault 156/5: 00000111101000000000000000
-Fault Not Detected
-Fault 375/5: 000001x11x1000xxxxxxxxxxxx
-Fault Not Detected
-Fault 347/5: 00x00111101000000000000000
-Fault Not Detected
-Fault 319/5: 00000111101000000000000000
-Fault Not Detected
+Fault 340/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 758/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 466/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 156/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 375/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 347/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
+Fault 319/5: xxxx0x111xxx00xxxx0xxxx0xx Fault Not Detected
 
 Inputs: 10x01xx01x1xxxxxxxxxxxx1xxxxxxxxxxxxxxx1xxxxxxxxx00001xxxxxx
 Outputs: 0x0x01xx1x1100xxxxxxxxx0x0
-Fault 340/5: 0x0x01xx1x1100xxxxxxxxx0x0
-Fault Not Detected
-Fault 758/5: 00000111101000000000000000
-Fault Not Detected
-Fault 466/5: 00000111101000000000000000
-Fault Not Detected
-Fault 156/5: 00000111101000000000000000
-Fault Not Detected
-Fault 375/5: 000x01111x1000xxxxxxxxxxxx
-Fault Not Detected
-Fault 347/5: 00x00111101000000000000000
-Fault Not Detected
-Fault 319/5: 00000111101000000000000000
-Fault Not Detected
+Fault 340/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 758/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 466/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 156/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 375/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 347/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
+Fault 319/5: 0x0x01xx1x1100xxxxxxxxx0x0 Fault Not Detected
 
 Inputs: 00xxxxxxxx0xxxxxxxxxxxx1xxxxxxxxxxxxxxxxxxxxxxxxx00001xxxxxx
 Outputs: xxxx01111x1000xxxxxxxxx0xx
-Fault 340/5: xxxx01111x1000xxxxxxxxx0xx
-Fault Not Detected
-Fault 758/5: 00000111101000000000000000
-Fault Not Detected
-Fault 466/5: 00000111101000000000000000
-Fault Not Detected
-Fault 156/5: 00000111101000000000000000
-Fault Not Detected
-Fault 375/5: 00000111101000000000000000
-Fault Not Detected
-Fault 347/5: 00000111101000000000000000
-Fault Not Detected
-Fault 319/5: 00000111101000000000000000
-Fault Not Detected
+Fault 340/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 758/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 466/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 156/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 375/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 347/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
+Fault 319/5: xxxx01111x1000xxxxxxxxx0xx Fault Not Detected
 
