@@ -38,8 +38,8 @@ Constant Declarations
 #define NOT  9				// INVERTER 
 #define FROM 10				// STEM BRANCH
 
-#define X 2
-#define D 3
+#define X  2
+#define D  3
 #define Db 4
 /***************************************************************************************************************************
 Structure Declarations 
@@ -59,16 +59,13 @@ typedef struct NODE_type
 } NODE;
 //3.Stucture declaration for PATTERN
 typedef struct PATTERN_type{
-  int matrix[Mlin]; 
+  int matrix[Mlin]; //input pattern
 } PATTERN; 
 //4.Stucture declaration for FAULT
 typedef struct FAULT_type{
-  int id;
-  int val;
+  int id; //id of the fault
+  int val; //fault value
 } FAULT;
-
-
-
 
 /***************************************************************************************************************************
 Functions in given.c

@@ -1,4 +1,6 @@
 #include "graph.h"
+
+// Global Varivles for truth tables with 5 values
 int INPT_out[5] = {0,1,X,D,Db};
                     
 int OR_out[5][5] = {{0,1,X,D,Db},
@@ -21,6 +23,8 @@ int XOR_out[5][5] = {{0,1,X,D,Db},
 
 int NOT_out[5] = {1,0,X,Db,D};
 
+
+// Fuction for counting the number of inputs in the circuit
 int count_inputs(NODE *graph, int Max){
     int i; 
     int num_input = 0; 
@@ -32,6 +36,7 @@ int count_inputs(NODE *graph, int Max){
     return num_input; 
 }
 
+// Function for counting the number of outputs in the circuit while saving all ouput node ids
 int count_outputs(NODE *graph, int Max, int out_list[]){
     int num_output = 0;
     int i = 0; 
@@ -46,6 +51,8 @@ int count_outputs(NODE *graph, int Max, int out_list[]){
     return num_output; 
 }
 
+
+// Fuction for simulating the circuit with the input vector
 void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
     int i,j; 
     int input_count = 0;
@@ -122,10 +129,10 @@ void sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx){
             graph[i].Cval = NOT_out[graph[temp->id].Cval];
         }
     }
-    //PrintCircuit(graph, Max);
     return;     
 }
 
+// Function for writing the output to the result file
 void out_write_sim(FILE* result, NODE* graph, PATTERN *vector, int out_list[],int num_output, int num_input, int current_idx, int max){
 	int i;
     fprintf(result, "Inputs: ");
@@ -154,6 +161,7 @@ void out_write_sim(FILE* result, NODE* graph, PATTERN *vector, int out_list[],in
     return;
 }
 
+// Function for reading the .faults file and storing the information in the FAULT structure
 int ReadFault(FILE *ffau, FAULT *f){
     char input[Mlin];
     int idx = 0; 
@@ -168,6 +176,7 @@ int ReadFault(FILE *ffau, FAULT *f){
     return idx;
 }
 
+// Function for simulating the circuit with the faults and writing outputs to the result file
 void fault_sim(NODE *graph, int Max, int num_input, PATTERN *p, int cur_idx, FAULT *f, int fault_idx, FILE *fres){
     int i,j,k; 
     int input_count = 0;
